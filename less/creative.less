@@ -114,7 +114,7 @@ aside {
             &.active {
                 > a,
                 > a:focus {
-                    color: @gray-darker !important;
+                    color: white !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -172,13 +172,15 @@ header {
     background-position: center;
     background-image: url('../img/fan_top.jpg');
     text-align: center;
-    color: white;
+    color: @gray;
     .header-content {
         position: relative;
         text-align: center;
         padding: 100px 15px 100px;
         width: 100%;
         .header-content-inner {
+            background-color: rgba(255, 255, 255, 0.6); 
+
             h1 {
                 font-weight: 700;
                 text-transform: uppercase;
@@ -187,11 +189,12 @@ header {
                 font-size: 30px;
             }
             hr {
+                border-color: @theme-primary;
                 margin: 30px auto;
             }
             p {
                 font-weight: 300;
-                color: fade(white, 70%);
+                color: @gray-dark;
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -210,12 +213,19 @@ header {
                 max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
+                text-transform: uppercase;
+                background-color: rgba(255, 255, 255, 0.6); 
+
                 h1 {
                     font-size: 50px;
                 }
+                hr {
+                    border-color: @theme-primary;
+                }
                 p {
-                    font-size: 18px;
+                    font-size: 22px;
                     max-width: 80%;
+                    color: @gray-dark;
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -363,4 +373,12 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @gray-darker;
+}
+
+#facebook {
+    color: #3b5998;
+}
+
+.map {
+    height: 500px;
 }
