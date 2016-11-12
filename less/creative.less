@@ -74,24 +74,29 @@ aside {
 // Navigation
 
 .navbar-default {
-    background-color: white;
+    background-color: @theme-primary;
     border-color: fade(@gray-darker, 5%);
     .sans-serif-font;
     .transition-all;
     .navbar-header .navbar-brand {
-        color: @theme-primary;
+        color: fade(white, 70%);
         .sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken(@theme-primary, 10%);
+            color: white;
         }
+    }
+
+    .navbar-brand>img {
+        height: 100%;
+        width: auto;
     }
     .navbar-header .navbar-toggle {
         font-weight: 700;
         font-size: 12px;
-        color: @gray-darker;
+        color: white;
         text-transform: uppercase;
     }
     .nav {
@@ -99,17 +104,17 @@ aside {
             > a,
             > a:focus {
                 text-transform: uppercase;
-                font-weight: 700;
-                font-size: 13px;
-                color: @gray-darker;
+                font-weight: 100;
+                font-size: 17px;
+                color: fade(white, 70%);;
                 &:hover {
-                    color: @theme-primary;
+                    color: white;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: @theme-primary !important;
+                    color: @gray-darker !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -119,7 +124,7 @@ aside {
         }
     }
     @media (min-width: 768px) {
-        background-color: transparent;
+        background-color: @theme-primary;
         border-color: fade(white, 30%);
         .navbar-header .navbar-brand {
             color: fade(white, 70%);
@@ -136,21 +141,21 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
-            border-color: fade(@gray-darker, 5%);
+            background-color: @theme-primary;
+            border-color: fade(white, 30%);
             .navbar-header .navbar-brand {
-                color: @theme-primary;
+                color: fade(white, 70%);  
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken(@theme-primary, 10%);
+                    color: white;
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @gray-darker;
+                color: fade(white, 70%);
                 &:hover {
-                    color: @theme-primary;
+                    color: white;
                 }
             }
         }
@@ -165,7 +170,7 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/fan_top.jpg');
     text-align: center;
     color: white;
     .header-content {
